@@ -1,0 +1,10 @@
+version: '3'
+
+env:
+  NAME: glob
+
+tasks:
+  default:
+    desc: Build standalone executable
+    cmds:
+      - pyinstaller -F --clean --name {{.NAME}} setup.py
